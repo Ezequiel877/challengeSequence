@@ -9,41 +9,38 @@ fun main(args: Array<String>) {
     * , es decir, los múltiplos de 3 y 5 (o de 15), por la palabra “fizzbuzz”. Devolverme ademas la cantidad de fizz,
     *  la cantidad de buzz,
     * la cantidad de fizzbuzz y la cantidad de numeros sin estas combinaciones. Ordenado por mayor a menor
-    *
-    * val list = (0..100).toList()
-      Collections.replaceAll(list,4, "")
-    *
-    *
-    * fun <T> merge(first: List<T>, second: List<T>): List<T> {
-    val list: MutableList<T> = ArrayList()
-    list.addAll(first)
-    list.addAll(second)
-    return list
-}var num=1
-    while (num <=100 ){
-        println(num)
-        num++
-    }
     * */
-    val list = (0..100).toList()
 
-    for (e in 0..100) {
+    val listLoad: MutableList<Any> = ArrayList()
+    var fizz=1
+    var buzz=1
+    var fizzbuzz=1
 
-        if (e % 3 == 0 && e % 5 == 0) {
-            Collections.replaceAll(list, e, "fizzbuzz")
-            Collections.replaceAll(list, Int, "fizzbuzz")
+    for (e in 1..100) {
+        if (e % 15 == 0) {
+            println("fizzbuzz")
+            fizzbuzz++
+
         }
-        if (e % 3 == 0) {
-            Collections.replaceAll(list, e, "fizz")
+        else if (e % 3 == 0){
+            println("fizz")
+            fizz++
+            listLoad.add(e)
         }
-        if (e % 5 == 0) {
-            Collections.replaceAll(list, e, "buzz")
+        else if (e % 5 == 0) {
+            println("buzz")
+            buzz++
+            listLoad.add(e)
         }
+
+        else println(e)
     }
-    var num = 1
-    var n = num++
-    var id=list
-    Collections.replaceAll(list, Int, "fizzbuzz")
-    println(list)
+
+    println("la palabra fizz se imprio $fizz")
+    println("la palabra fizz se imprio $buzz")
+    println("y la combinacion de ambas palabras $fizzbuzz")
+    println("la cantidad de numeros sin estas combinaciones ${listLoad.size}")
+    println("Ordenado por mayor a menor ${listLoad.reversed()}")
+
 
 }
