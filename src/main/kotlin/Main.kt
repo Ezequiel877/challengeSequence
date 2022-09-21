@@ -11,9 +11,7 @@ fun main(args: Array<String>) {
     * la cantidad de fizzbuzz y la cantidad de numeros sin estas combinaciones. Ordenado por mayor a menor
     *
     * val list = (0..100).toList()
-
-        Collections.replaceAll(list,4, "")
-
+      Collections.replaceAll(list,4, "")
     *
     *
     * fun <T> merge(first: List<T>, second: List<T>): List<T> {
@@ -21,20 +19,31 @@ fun main(args: Array<String>) {
     list.addAll(first)
     list.addAll(second)
     return list
-}
+}var num=1
+    while (num <=100 ){
+        println(num)
+        num++
+    }
     * */
     val list = (0..100).toList()
 
-    for (e in 0..100){
-        if (e % 3 ==0 ){
-            Collections.replaceAll(list,e, "bizz")
-            println(list)
+    for (e in 0..100) {
 
+        if (e % 3 == 0 && e % 5 == 0) {
+            Collections.replaceAll(list, e, "fizzbuzz")
+            Collections.replaceAll(list, Int, "fizzbuzz")
+        }
+        if (e % 3 == 0) {
+            Collections.replaceAll(list, e, "fizz")
+        }
+        if (e % 5 == 0) {
+            Collections.replaceAll(list, e, "buzz")
         }
     }
-
-
-
-
+    var num = 1
+    var n = num++
+    var id=list
+    Collections.replaceAll(list, Int, "fizzbuzz")
+    println(list)
 
 }
