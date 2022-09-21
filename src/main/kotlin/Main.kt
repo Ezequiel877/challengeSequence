@@ -37,7 +37,7 @@ fun main(args: Array<String>) {
     }
 
     println("la palabra fizz se imprio $fizz")
-    println("la palabra fizz se imprio $buzz")
+    println("la palabra buzz se imprio $buzz")
     println("y la combinacion de ambas palabras $fizzbuzz")
     println("la cantidad de numeros sin estas combinaciones ${listLoad.size}")
     println("Ordenado por mayor a menor ${listLoad.reversed()}")
