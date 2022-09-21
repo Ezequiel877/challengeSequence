@@ -16,17 +16,21 @@ fun main(args: Array<String>) {
     var buzz=1
     var fizzbuzz=1
 
+    //creamos una lista donde se recorra del 1 al 100
     for (e in 1..100) {
+        //cuando sea  los múltiplos de 3 y 5 (o de 15) se imprimira fizzbuzz
         if (e % 15 == 0) {
             println("fizzbuzz")
             fizzbuzz++
 
         }
+        //cuando sea los múltiplos de 3 por la palabra “fizz”
         else if (e % 3 == 0){
             println("fizz")
             fizz++
             listLoad.add(e)
         }
+        //cuando sea los múltiplos de 5 por la palabra “buzz”
         else if (e % 5 == 0) {
             println("buzz")
             buzz++
